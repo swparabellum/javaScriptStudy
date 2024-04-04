@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var col = window.prompt("열을 입력하세요");
+        var row = window.prompt("행을 입력하세요");
+
+        document.write("<table border ='1'>");
+            document.write("<tr>");
+        for (i = 0; i < row; i++) {
+            for (j = 0; j < col; j++) {
+                document.write("<td>");
+                document.write("</td>");
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+    </script>
+</body>
+</html>
