@@ -1,0 +1,20 @@
+<!-- https://developer-talk.tistory.com/850 -->
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <button id="btn-yellow">배경색을 yellow로</button>
+        <button id="btn-white">배경색을 white로</button>
+
+        <script>
+            const btnYellow = document.getElementById("btn-yellow");
+            const btnWhite = document.getElementById("btn-white");
+
+            btnYellow.addEventListener("click",(e) => {document.body.style.backgroundColor = "yellow";});
+            btnWhite.addEventListener("click",(e) => {document.body.style.backgroundColor = "white";});
+            
+        </script>
+    </body>
+</html>
