@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+
+            var num=1;
+            document.write("<table>");
+            document.write("<tr>");
+            for(var i=0;i<4;i++){
+                document.write("<tr>");
+                for( var j=0; j<3; j++){
+                    console.log(i+" " +j +" "+num);
+                    
+                    document.write("<td>");
+                    if(num < 10){
+                    document.write("<button>"+num+"</button> ");
+                    }
+                    else if(num == 10){
+                        document.write("<button>취소</button>");
+                    }
+                    else if(num == 11){
+                        document.write("<button>0</button> ");
+                    }
+                    else if(num == 12){
+                        document.write("<button>확인</button>");
+                    }
+                    document.write("</td>");
+                    
+                    num++;
+                }
+                document.write("<tr>");
+            }
+            document.write("</table>");
+
+        </script>
+    </body>
+</html>
