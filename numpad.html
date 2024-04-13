@@ -6,6 +6,9 @@
             function Clicked(btnNum){
                 document.getElementById("getNumInput").value += btnNum;
             }
+            function getNumInputClear(){
+                document.getElementById("getNumInput").value = "";
+            }
         </script>
         <form>
             <input type="text" id="getNumInput" pattern="[0-9]+">
@@ -30,7 +33,7 @@
                     document.write("<button onclick='Clicked("+array[num]+")'; >"+array[num]+"</button> ");
                     }
                     else if(num == 10){
-                        document.write("<button>취소</button>");
+                        document.write("<button onclick='getNumInputClear()';>취소</button>");
                     }
                     else if(num == 11){
                         document.write("");
