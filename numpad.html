@@ -2,8 +2,13 @@
 <html>
     <head></head>
     <body>
+        <script>
+            function Clicked(btnNum){
+                document.getElementById("getNumInput").value += btnNum;
+            }
+        </script>
         <form>
-            <input type="text" pattern="[0-9]+">
+            <input type="text" id="getNumInput" pattern="[0-9]+">
             <input type="submit" value="확인">
         </form>
         
@@ -22,7 +27,7 @@
                     
                     document.write("<td>");
                     if(num < 10){
-                    document.write("<button>"+array[num]+"</button> ");
+                    document.write("<button onclick='Clicked("+array[num]+")'; >"+array[num]+"</button> ");
                     }
                     else if(num == 10){
                         document.write("<button>취소</button>");
@@ -34,7 +39,7 @@
                     
                     num++;
                 }
-                document.write("<tr>");
+                document.write("</tr>");
             }
             document.write("</table>");
 
