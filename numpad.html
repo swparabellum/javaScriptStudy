@@ -1,51 +1,54 @@
 <!DOCTYPE html>
 <html>
-    <head></head>
-    <body>
-        <script>
-            function Clicked(btnNum){
-                document.getElementById("getNumInput").value += btnNum;
-            }
-            function getNumInputClear(){
-                document.getElementById("getNumInput").value = "";
-            }
-        </script>
-        <form>
-            <input type="text" id="getNumInput" pattern="[0-9]+" readonly>
-            <input type="submit" value="확인">
-        </form>
-        
-        <script>
-            var array = [0,1,2,3,4,5,6,7,8,9];
-            
-            array.sort(() => Math.random() - 0.5);
 
-            var num=0;
-            document.write("<table>");
+<head></head>
+
+<body>
+    <script>
+        function Clicked(btnNum) {
+            document.getElementById("getNumInput").value += btnNum;
+        }
+        function getNumInputClear() {
+            document.getElementById("getNumInput").value = "";
+        }
+    </script>
+    <form>
+        <input type="text" id="getNumInput" pattern="[0-9]+" readonly>
+        <input type="submit" value="확인">
+    </form>
+
+    <script>
+        var array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+        array.sort(() => Math.random() - 0.5);
+
+        var num = 0;
+        document.write("<table>");
+        document.write("<tr>");
+        for (var i = 0; i < 3; i++) {
             document.write("<tr>");
-            for(var i=0;i<3;i++){
-                document.write("<tr>");
-                for( var j=0; j<4; j++){
-                    console.log(i+" " +j +" "+num);
-                    
-                    document.write("<td>");
-                    if(num < 10){
-                    document.write("<button onclick='Clicked("+array[num]+")'; >"+array[num]+"</button> ");
-                    }
-                    else if(num == 10){
-                        document.write("<button onclick='getNumInputClear()';>취소</button>");
-                    }
-                    else if(num == 11){
-                        document.write("");
-                    }
-                    document.write("</td>");
-                    
-                    num++;
-                }
-                document.write("</tr>");
-            }
-            document.write("</table>");
+            for (var j = 0; j < 4; j++) {
+                console.log(i + " " + j + " " + num);
 
-        </script>
-    </body>
+                document.write("<td>");
+                if (num < 10) {
+                    document.write("<button onclick='Clicked(" + array[num] + ")'; >" + array[num] + "</button> ");
+                }
+                else if (num == 10) {
+                    document.write("<button onclick='getNumInputClear()';>취소</button>");
+                }
+                else if (num == 11) {
+                    document.write("");
+                }
+                document.write("</td>");
+
+                num++;
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+
+    </script>
+</body>
+
 </html>
