@@ -1,8 +1,11 @@
-function clickBtn(color){
-    if(color == yellow){
+function clickBtn(){
         document.body.style.backgroundColor = "yellow";
-    }else if(color == white){
-        document.body.style.backgroundColor = "white";
+}
+var cnt =0;
+function counter(){
+    cnt++;
+    if(cnt == 3){
+alert("3번 누르셨습니다!");
+cnt =0;
     }
-    
 }
