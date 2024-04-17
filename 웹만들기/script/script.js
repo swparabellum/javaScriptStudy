@@ -22,3 +22,15 @@ function counter2(type){
     }
     myCounter.innerText=number;
 }
+
+
+
+function changeBackgroundColor() { 
+    var x = Math.floor(Math.random() *256), 
+        y = Math.floor(Math.random() * 256),
+        z = Math.floor(Math.random() * 256);
+        //R, G, B
+
+        document.body.style.backgroundColor = 'rgb(' + x + ',' + y + ',' + z + ')';
+        //https://stackoverflow.com/questions/64089791/button-to-change-background-color-randomly
+};
