@@ -9,8 +9,10 @@
 
 <body>
     <header>
-        <h4>환영!</h4>
-        <img class="fit-pic" src="media/miku.png" alt="miku">
+        <div style="display: inline-block;">
+            <h2>환영!</h2>
+            <img class="fit-pic" src="media/miku.png" alt="miku">
+        </div>
         <div class="box">
             <form>
                 로그인<br>
@@ -20,23 +22,35 @@
                 <input type="button" value="회원가입" onclick="location.href='signup.html'">
             </form>
         </div>
-
         <hr>
     </header>
+    <nav class="box" style="background-color: burlywood;">
+        <h3>네비게이션</h3>
+        <div  class="box">
+            <a class="url"  href="#JS1">자바스크립트1</a></div>
+        <div  class="box">
+            <a class="url"  href="#JS2">자바스크립트2</a>
+        </div>
+        <div  class="box">nav3</div>
+    </nav>
     <section>
-        <article>
+        <article id="JS1" style="background-color: azure;">
+            <h3>자바스크립트1</h3>
             <div class="box">
                 <button type="button" onclick="clickBtn('yellow')" ;>배경색을 yellow로</button>
                 <button type="button" onclick="clickBtn('white')" ;>배경색을 white로</button>
             </div>
+            <div class="box">
+                <button type="button" onclick="counter()" ;>3번 클릭할때마다 alert띄움</bitton>
+                    <button type="button" onclick="counter2('plus')" ;>버튼 누른수만큼 아래 숫자가 증가</button>
+                    <div id="getCount">0</div>
+            </div>
         </article>
-        <article class="box">
-            <button type="button" onclick="counter()" ;>3번 클릭할때마다 alert띄움</bitton> <br>
-                <button type="button" onclick="counter2('plus')" ;>버튼 누른수만큼 아래 숫자가 증가</button>
-                <div id="getCount">0</div>
-        </article>
-        <article>
-            <!-- https://hianna.tistory.com/476 -->
+        <article id="JS2" style="background-color: azure;">
+            <h3>자바스크립트2</h3>
+            <div class="box">
+                <a class="url" href="makeTable.html">테이블만들기</a>
+            </div>
         </article>
     </section>
 </body>
